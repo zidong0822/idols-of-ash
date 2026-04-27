@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#0f1020"/>
+  <rect x="24" y="24" width="592" height="432" rx="24" fill="#161933" stroke="#2b2f63" stroke-width="2"/>
+  <rect x="64" y="72" width="512" height="220" rx="18" fill="url(#paint0_linear)"/>
+  <rect x="64" y="324" width="180" height="18" rx="9" fill="#6a6fe8"/>
+  <rect x="64" y="356" width="420" height="14" rx="7" fill="#99a1ff" fill-opacity="0.45"/>
+  <rect x="64" y="384" width="360" height="14" rx="7" fill="#99a1ff" fill-opacity="0.3"/>
+  <circle cx="150" cy="182" r="46" fill="#fff" fill-opacity="0.16"/>
+  <path d="M142 159L176 182L142 205V159Z" fill="#fff"/>
+  <text x="320" y="176" text-anchor="middle" fill="#ffffff" font-size="34" font-family="Arial, sans-serif" font-weight="700">Browser Game</text>
+  <text x="320" y="214" text-anchor="middle" fill="#d7dbff" font-size="20" font-family="Arial, sans-serif">Imported from verified source list</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="64" y1="72" x2="576" y2="292" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2b2f63"/>
+      <stop offset="1" stop-color="#4d2d79"/>
+    </linearGradient>
+  </defs>
+</svg>

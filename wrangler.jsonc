@@ -1,0 +1,37 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "idols-of-ash",
+	"main": ".open-next/worker.js",
+	"compatibility_date": "2025-10-08",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".open-next/assets"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "idols-of-ash-comments",
+			"database_id": "9106e775-047d-45a3-8c97-548f2da2c0b6",
+			"migrations_dir": "migrations"
+		}
+	],
+	"routes": [
+		{
+			"pattern": "idols-of-ash.org",
+			"zone_name": "idols-of-ash.org",
+			"custom_domain": true
+		}
+	],
+	"observability": {
+		"enabled": true
+	},
+	"upload_source_maps": true
+}

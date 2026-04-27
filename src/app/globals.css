@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #8a2f24;
+    --color-secondary: #b58a58;
+    --color-cta: #6f130f;
+    --color-background: #0b0908;
+    --color-card: #181412;
+    --color-surface: #151110;
+    --color-text-main: #e5ddd2;
+    --color-text-muted: #9f9385;
+    --color-border-main: #5f4731;
+
+    --font-family-display: var(--font-display), serif;
+    --font-family-body: var(--font-body), sans-serif;
+}
+
+@layer base {
+    html {
+        background: #0b0908;
+    }
+
+    body {
+        @apply bg-[var(--color-background)] text-[var(--color-text-main)] antialiased;
+        background-image:
+            radial-gradient(circle at top, rgba(111, 19, 15, 0.22), transparent 34%),
+            radial-gradient(circle at 20% 20%, rgba(181, 138, 88, 0.08), transparent 24%),
+            linear-gradient(180deg, #100c0b 0%, #0b0908 36%, #090807 100%);
+        font-family: var(--font-family-body);
+        letter-spacing: 0.01em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-display {
+        font-family: var(--font-family-display);
+    }
+}
+
+@layer utilities {
+    .glow-border {
+        @apply hover:shadow-[0_0_18px_rgba(111,19,15,0.32)] transition-shadow duration-300;
+    }
+
+    .gradient-text {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-[#d6c2ab] via-[var(--color-secondary)] to-[var(--color-primary)];
+    }
+
+    .gradient-bg {
+        @apply bg-gradient-to-r from-[var(--color-cta)] to-[var(--color-secondary)];
+    }
+}

@@ -1,0 +1,48 @@
+{
+	"name": "idols-of-ash",
+	"description": "Idols of Ash - A first-person horror and parkour game.",
+	"cloudflare": {
+		"label": "Idols of Ash",
+		"products": [
+			"Workers"
+		],
+		"categories": [],
+		"preview_icon_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/05eee9e0-2c04-48fd-11bf-84e65f839000/public",
+		"preview_image_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/4e913a56-fd99-4372-0586-9f1364173100/preview",
+		"publish": true
+	},
+	"dependencies": {
+		"@next/third-parties": "^16.2.1",
+		"@opennextjs/cloudflare": "1.14.0",
+		"framer-motion": "^12.29.0",
+		"lucide-react": "^0.563.0",
+		"next": "16.0.7",
+		"react": "19.2.1",
+		"react-dom": "19.2.1"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "3",
+		"@tailwindcss/postcss": "4.1.17",
+		"@types/node": "24.10.1",
+		"@types/react": "19.2.7",
+		"@types/react-dom": "19.2.3",
+		"eslint": "9.39.2",
+		"eslint-config-next": "16.0.7",
+		"tailwindcss": "4.1.17",
+		"typescript": "5.9.3",
+		"wrangler": "4.56.0"
+	},
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
+		"check": "npm run build && tsc",
+		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy && npm run indexnow",
+		"dev": "next dev",
+		"indexnow": "npx tsx scripts/submit-indexnow.ts",
+		"lint": "next lint",
+		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+		"start": "next start"
+	},
+	"packageManager": "pnpm@10.26.2+sha1.c9ef373489592dd05d174d2a7cf5a9f4306de94f"
+}
