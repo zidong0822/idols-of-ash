@@ -22,9 +22,9 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Idols of Ash - Play Online Unblocked (No Download)",
-    description: "Play Idols of Ash unblocked in your browser. Experience this viral first-person horror climbing game with zero downloads. Master Schmovement & survive.",
-    keywords: ["idols of ash", "unblocked", "no download", "horror parkour", "browser game", "first person"],
+    title: "Idols of Ash - Browser Game Guides, Play Pages, and Support Content",
+    description: "Explore Idols of Ash game pages, browser-playable experiences, practical guides, and support content focused on fast access and clear game information.",
+    keywords: ["idols of ash", "browser game", "game guides", "play pages", "horror parkour", "first person"],
     authors: [{ name: "Idols of Ash Team" }],
     creator: "Idols of Ash",
     metadataBase: new URL("https://idols-of-ash.org"),
@@ -35,15 +35,15 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         url: "https://idols-of-ash.org",
-        title: "Idols of Ash | Free First-Person Horror Parkour Game",
-        description: "Play Idols of Ash, a dark fantasy first-person horror and parkour game. Experience the thrill of 'Schmovement' and survive.",
+        title: "Idols of Ash | Browser Game Pages, Guides, and Support Content",
+        description: "Explore Idols of Ash game pages, browser-playable experiences, practical guides, and support content.",
         siteName: "Idols of Ash",
         images: ["/games/covers/idols-of-ash.png"],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Idols of Ash | Free First-Person Horror Parkour Game",
-        description: "Play Idols of Ash, a dark fantasy first-person horror and parkour game.",
+        title: "Idols of Ash | Browser Game Pages, Guides, and Support Content",
+        description: "Explore Idols of Ash game pages, browser-playable experiences, practical guides, and support content.",
         images: ["/games/covers/idols-of-ash.png"],
     },
     robots: {

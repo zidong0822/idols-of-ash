@@ -18,6 +18,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
         {
+            url: `${baseUrl}/contact`,
+            lastModified: new Date("2026-04-29"),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/how-we-review-games`,
+            lastModified: new Date("2026-04-29"),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/privacy-policy`,
+            lastModified: new Date("2026-04-29"),
+            changeFrequency: 'monthly',
+            priority: 0.6,
+        },
+        {
+            url: `${baseUrl}/terms-of-service`,
+            lastModified: new Date("2026-04-29"),
+            changeFrequency: 'monthly',
+            priority: 0.6,
+        },
+        {
             url: `${baseUrl}/games/idols-of-ash/guide`,
             lastModified: new Date("2026-03-30"),
             changeFrequency: 'weekly',

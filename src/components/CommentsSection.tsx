@@ -148,6 +148,9 @@ export function CommentsSection({ gameSlug, gameTitle }: CommentsSectionProps) {
 				<p className="text-sm text-[var(--color-text-muted)] mt-2">
 					Share your notes for {gameTitle}. Keep feedback useful for the next player.
 				</p>
+				<p className="text-xs text-[var(--color-text-muted)]/80 mt-2">
+					Comments may be reviewed or removed if they look like spam, abuse, or unrelated submissions.
+				</p>
 			</div>
 
 			<form className="space-y-4" onSubmit={handleSubmit}>

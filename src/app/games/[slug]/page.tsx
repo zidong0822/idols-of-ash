@@ -16,6 +16,23 @@ interface GamePageProps {
     }>;
 }
 
+function getSharedCategoryCount(a: string[], b: string[]) {
+    return a.filter((item) => b.includes(item)).length;
+}
+
+function buildContrastNote(currentTitle: string, currentCategories: string[], candidateTitle: string, candidateCategories: string[]) {
+    const shared = currentCategories.filter((item) => candidateCategories.includes(item));
+    if (shared.includes("browser-games") && shared.length > 1) {
+        return `${candidateTitle} overlaps with ${currentTitle} on ${shared.filter((item) => item !== "browser-games").join(" / ")} but pushes the session in a different direction.`;
+    }
+
+    if (shared.length > 0) {
+        return `${candidateTitle} shares the ${shared[0]} angle with ${currentTitle}, but the pacing and player fit are different.`;
+    }
+
+    return `${candidateTitle} is useful as a contrast page because it targets a different browser-game mood than ${currentTitle}.`;
+}
+
 export async function generateStaticParams() {
     return indexedGameSlugs.map((slug) => ({ slug }));
 }
@@ -71,6 +88,22 @@ export default async function GamePage({ params }: GamePageProps) {
     const relatedGames = games
         .filter((candidate) => isIndexedGameSlug(candidate.slug) && candidate.slug !== game.slug)
         .slice(0, 5);
+    const comparisonGames = games
+        .filter((candidate) => isIndexedGameSlug(candidate.slug) && candidate.slug !== game.slug)
+        .map((candidate) => ({
+            ...candidate,
+            sharedCategoryCount: getSharedCategoryCount(game.categories, candidate.categories),
+        }))
+        .sort((a, b) => {
+            if (b.sharedCategoryCount !== a.sharedCategoryCount) {
+                return b.sharedCategoryCount - a.sharedCategoryCount;
+            }
+
+            const aEditorial = Number(Boolean(a.bestFor)) + Number(Boolean(a.sessionLength));
+            const bEditorial = Number(Boolean(b.bestFor)) + Number(Boolean(b.sessionLength));
+            return bEditorial - aEditorial;
+        })
+        .slice(0, 3);
     const breadcrumbItems = [
         { label: "Home", href: "/" },
         { label: game.title },
@@ -110,6 +143,16 @@ export default async function GamePage({ params }: GamePageProps) {
             })),
         }
         : null;
+    const hasEditorialLayer = Boolean(
+        game.editorVerdict ||
+        game.bestFor ||
+        game.sessionLength ||
+        game.playPriority ||
+        game.frictionPoints?.length ||
+        game.reviewMethod ||
+        game.reviewedAt ||
+        game.embedNote
+    );
 
     return (
         <div className="space-y-8">
@@ -120,29 +163,25 @@ export default async function GamePage({ params }: GamePageProps) {
             </div>
 
             <section className="w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-[0_0_30px_rgba(111,19,15,0.22)] bg-[#050404]">
-                {playableSrc ? (
-                    <GamePlayer iframeSrc={playableSrc} coverImg={game.img} title={game.title} />
-                ) : (
-                    <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-0 bg-[var(--color-surface)]">
-                        <img src={game.img} alt={game.title} className="w-full h-full object-cover min-h-[260px]" />
-                        <div className="p-8 flex flex-col justify-center">
-                            <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-cta)]">{game.tag}</p>
-                            <h1 className="text-4xl font-bold text-white mt-3">{game.title}</h1>
-                            <p className="text-[var(--color-text-muted)] mt-4">{game.summary}</p>
-                        </div>
-                    </div>
-                )}
-
-                <div className="p-6 sm:p-8 bg-[var(--color-surface)] border-t border-[var(--color-border-main)] space-y-6">
-                    <div className="flex flex-wrap items-start justify-between gap-6">
-                        <div className="max-w-3xl">
-                            <p className="text-sm uppercase tracking-[0.28em] text-[var(--color-cta)]">Game Detail</p>
-                            <h1 className="text-3xl sm:text-4xl font-black text-white mt-2">{game.title}</h1>
-                            <p className="text-[var(--color-text-muted)] mt-4">{game.description}</p>
-                        </div>
+                <div className="grid md:grid-cols-[0.88fr_1.12fr] gap-0 bg-[var(--color-surface)]">
+                    <img src={game.img} alt={game.title} className="w-full h-full object-cover min-h-[280px]" />
+                    <div className="p-6 sm:p-8 flex flex-col justify-center">
+                        <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-cta)]">{game.tag}</p>
+                        <h1 className="text-3xl sm:text-4xl font-black text-white mt-3">{game.title}</h1>
+                        <p className="text-[var(--color-text-muted)] mt-4">{game.description}</p>
+                        <p className="text-sm text-[var(--color-text-main)]/90 mt-5 leading-7">{game.summary}</p>
+                        {game.reviewedAt || game.reviewMethod ? (
+                            <div className="mt-6 rounded-xl border border-[var(--color-border-main)]/40 bg-black/20 p-4">
+                                <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-cta)]">Editorial Review</p>
+                                <p className="text-sm text-[var(--color-text-muted)] mt-2">
+                                    {game.reviewedAt ? `Last reviewed ${game.reviewedAt}. ` : ""}
+                                    {game.reviewMethod ?? ""}
+                                </p>
+                            </div>
+                        ) : null}
 
                         {game.slug === "idols-of-ash" ? (
-                            <div className="flex flex-wrap gap-3">
+                            <div className="flex flex-wrap gap-3 mt-6">
                                 <Link
                                     href="/games/idols-of-ash/guide"
                                     className="px-4 py-2 rounded bg-[var(--color-cta)] text-white font-bold text-sm hover:opacity-90 transition-opacity"
@@ -164,7 +203,9 @@ export default async function GamePage({ params }: GamePageProps) {
                             </div>
                         ) : null}
                     </div>
+                </div>
 
+                <div className="p-6 sm:p-8 bg-[var(--color-surface)] border-t border-[var(--color-border-main)] space-y-6">
                     <div className="grid md:grid-cols-3 gap-4">
                         <article className="rounded-xl border border-[var(--color-border-main)]/40 bg-black/15 p-5">
                             <h2 className="text-lg font-bold text-white">Overview</h2>
@@ -205,8 +246,127 @@ export default async function GamePage({ params }: GamePageProps) {
                         </div>
                     ) : null}
 
+                    {hasEditorialLayer ? (
+                        <div className="space-y-4">
+                            <div>
+                                <h2 className="text-2xl font-bold text-white">Editor Take</h2>
+                                <p className="text-sm text-[var(--color-text-muted)] mt-2">
+                                    This section is written to explain why the page exists beyond the playable frame.
+                                </p>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-4">
+                                {game.editorVerdict ? (
+                                    <article className="rounded-xl border border-[var(--color-border-main)]/40 bg-black/15 p-5">
+                                        <h3 className="text-lg font-bold text-white">Why It Stands Out</h3>
+                                        <p className="text-sm text-[var(--color-text-muted)] mt-3">{game.editorVerdict}</p>
+                                    </article>
+                                ) : null}
+                                {game.bestFor ? (
+                                    <article className="rounded-xl border border-[var(--color-border-main)]/40 bg-black/15 p-5">
+                                        <h3 className="text-lg font-bold text-white">Best For</h3>
+                                        <p className="text-sm text-[var(--color-text-muted)] mt-3">{game.bestFor}</p>
+                                    </article>
+                                ) : null}
+                                {game.sessionLength ? (
+                                    <article className="rounded-xl border border-[var(--color-border-main)]/40 bg-black/15 p-5">
+                                        <h3 className="text-lg font-bold text-white">Session Shape</h3>
+                                        <p className="text-sm text-[var(--color-text-muted)] mt-3">{game.sessionLength}</p>
+                                    </article>
+                                ) : null}
+                                {game.playPriority ? (
+                                    <article className="rounded-xl border border-[var(--color-border-main)]/40 bg-black/15 p-5">
+                                        <h3 className="text-lg font-bold text-white">How To Use This Page</h3>
+                                        <p className="text-sm text-[var(--color-text-muted)] mt-3">{game.playPriority}</p>
+                                    </article>
+                                ) : null}
+                            </div>
+
+                            {game.frictionPoints?.length ? (
+                                <article className="rounded-xl border border-[var(--color-border-main)]/40 bg-black/15 p-5">
+                                    <h3 className="text-lg font-bold text-white">Early Friction Points</h3>
+                                    <ul className="mt-3 space-y-2 text-sm text-[var(--color-text-muted)] list-disc list-inside">
+                                        {game.frictionPoints.map((point) => (
+                                            <li key={point}>{point}</li>
+                                        ))}
+                                    </ul>
+                                </article>
+                            ) : null}
+                        </div>
+                    ) : null}
                 </div>
             </section>
+
+            {playableSrc ? (
+                <section className="w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-[0_0_30px_rgba(111,19,15,0.18)] bg-[#050404]">
+                    <div className="p-6 sm:p-8 bg-[var(--color-surface)] border-b border-[var(--color-border-main)] space-y-3">
+                        <p className="text-sm uppercase tracking-[0.28em] text-[var(--color-cta)]">Browser Play</p>
+                        <h2 className="text-2xl sm:text-3xl font-black text-white">Play {game.title} In Browser</h2>
+                        <p className="text-sm text-[var(--color-text-muted)] max-w-3xl">
+                            {game.embedNote ?? `Use the playable frame below as a quick browser test after reading the page context for ${game.title}.`}
+                        </p>
+                    </div>
+                    <GamePlayer iframeSrc={playableSrc} coverImg={game.img} title={game.title} />
+                </section>
+            ) : null}
+
+            {comparisonGames.length ? (
+                <section className="max-w-5xl mx-auto bg-[var(--color-surface)]/40 p-6 sm:p-8 rounded-xl border border-[var(--color-border-main)]/30 space-y-6">
+                    <div>
+                        <h2 className="text-2xl font-bold text-white">Compared With</h2>
+                        <p className="text-sm text-[var(--color-text-muted)] mt-2">
+                            These pages are included to show how {game.title} differs from other indexed games on the site, not just to add more links.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-4">
+                        {comparisonGames.map((candidate) => (
+                            <article key={candidate.slug} className="rounded-xl border border-[var(--color-border-main)]/40 bg-black/15 p-5">
+                                <h3 className="text-lg font-bold text-white">{candidate.title}</h3>
+                                <p className="text-xs uppercase tracking-[0.22em] text-[var(--color-cta)] mt-2">
+                                    {candidate.sharedCategoryCount > 0 ? "Closest Match" : "Different Angle"}
+                                </p>
+                                <p className="text-sm text-[var(--color-text-muted)] mt-3">
+                                    {buildContrastNote(game.title, game.categories, candidate.title, candidate.categories)}
+                                </p>
+                                {candidate.bestFor ? (
+                                    <p className="text-sm text-[var(--color-text-main)]/90 mt-4">
+                                        <strong className="text-white">Best for:</strong> {candidate.bestFor}
+                                    </p>
+                                ) : null}
+                                {candidate.sessionLength ? (
+                                    <p className="text-sm text-[var(--color-text-main)]/90 mt-3">
+                                        <strong className="text-white">Session shape:</strong> {candidate.sessionLength}
+                                    </p>
+                                ) : null}
+                                <Link
+                                    href={`/games/${candidate.slug}`}
+                                    className="inline-flex mt-5 text-sm text-[var(--color-cta)] hover:text-white transition-colors"
+                                >
+                                    Open comparison page →
+                                </Link>
+                            </article>
+                        ))}
+                    </div>
+                </section>
+            ) : null}
+
+            {game.editorialImage ? (
+                <section className="max-w-5xl mx-auto bg-[var(--color-surface)]/40 p-6 sm:p-8 rounded-xl border border-[var(--color-border-main)]/30 space-y-5">
+                    <div>
+                        <h2 className="text-2xl font-bold text-white">Editorial Snapshot</h2>
+                        <p className="text-sm text-[var(--color-text-muted)] mt-2">
+                            A custom site-made graphic that summarizes the main player-facing angle of this game page.
+                        </p>
+                    </div>
+                    <div className="overflow-hidden rounded-xl border border-[var(--color-border-main)]/40 bg-black/20">
+                        <img
+                            src={game.editorialImage}
+                            alt={game.editorialImageAlt ?? `${game.title} editorial infographic`}
+                            className="w-full h-auto object-cover"
+                        />
+                    </div>
+                </section>
+            ) : null}
 
             {game.slug === "idols-of-ash" ? (
                 <section className="max-w-5xl mx-auto bg-[var(--color-surface)]/40 p-6 sm:p-8 rounded-xl border border-[var(--color-border-main)]/30">

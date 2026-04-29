@@ -13,6 +13,8 @@ export function Sidebar() {
         { icon: <TrainFront className="w-5 h-5" />, label: "Bullet Train II", href: "/games/bullet-train-ii", ext: "text-[var(--color-secondary)]" },
         { icon: <Crosshair className="w-5 h-5" />, label: "Zone Survival", href: "/games/zone-survival-artifact-hunt", ext: "text-[#c2a37a]" },
         { icon: <Heart className="w-5 h-5" />, label: "About Us", href: "/about-us", ext: "text-[#8c7b66]" },
+        { icon: <Heart className="w-5 h-5" />, label: "Review Method", href: "/how-we-review-games", ext: "text-[#8c7b66]" },
+        { icon: <Heart className="w-5 h-5" />, label: "Contact", href: "/contact", ext: "text-[#8c7b66]" },
     ];
 
     return (

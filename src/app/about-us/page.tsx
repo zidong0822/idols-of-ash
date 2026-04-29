@@ -1,5 +1,6 @@
 import { ContentPageLayout } from "@/components/ContentPageLayout";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "About Us",
@@ -51,6 +52,22 @@ export default function AboutUs() {
             <h2 className="text-2xl font-bold mt-6 mb-4 text-white">Commercial Disclosure</h2>
             <p>
                 Some pages may include advertising placements. Ads do not determine factual claims in our game descriptions, guides, or support pages.
+            </p>
+            <h2 className="text-2xl font-bold mt-6 mb-4 text-white">Policy Links</h2>
+            <p>
+                Review our{" "}
+                <Link href="/privacy-policy" className="text-[var(--color-cta)] hover:text-white transition-colors">
+                    Privacy Policy
+                </Link>
+                ,{" "}
+                <Link href="/terms-of-service" className="text-[var(--color-cta)] hover:text-white transition-colors">
+                    Terms of Service
+                </Link>
+                , and{" "}
+                <Link href="/contact" className="text-[var(--color-cta)] hover:text-white transition-colors">
+                    Contact
+                </Link>{" "}
+                page for operational details and reporting paths.
             </p>
             <p className="mt-8 text-center text-[var(--color-primary)] font-bold">
                 Explore, play, and stay moving through Idols of Ash.

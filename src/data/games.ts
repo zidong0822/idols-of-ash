@@ -24,6 +24,16 @@ export interface Game {
     features?: string[];
     seoSections?: GameContentSection[];
     faqItems?: FaqItem[];
+    editorVerdict?: string;
+    bestFor?: string;
+    sessionLength?: string;
+    playPriority?: string;
+    frictionPoints?: string[];
+    reviewMethod?: string;
+    reviewedAt?: string;
+    embedNote?: string;
+    editorialImage?: string;
+    editorialImageAlt?: string;
 }
 
 export interface FaqItem {
@@ -74,6 +84,17 @@ export const games: Game[] = [
         developer: "GameDistribution",
         reviewSummary: "An excellent logic puzzle game that creatively uses archery mechanics to test your spatial reasoning.",
         features: ["Browser", "Puzzle", "Logic", "Atmospheric"],
+        editorVerdict: "Arrow Escape Puzzle is most useful as a deliberate spatial puzzle page. The bow theme matters less than the fact that each level is about planning lines and reading geometry before you commit.",
+        bestFor: "Players who want short logic sessions, visible puzzle escalation, and a browser game that rewards planning over reflexes.",
+        sessionLength: "Best in 5 to 15 minute sessions because each puzzle asks for a small number of careful attempts rather than a long campaign commitment.",
+        playPriority: "Read the overview first, then use the browser frame to test whether the angle-and-switch puzzle loop clicks for you.",
+        frictionPoints: [
+            "New players often assume this is an action game because of the bow framing, but the real challenge is spatial logic.",
+            "Mistakes usually come from committing to a shot before checking ricochet paths and switch order."
+        ],
+        reviewMethod: "Reviewed as a browser logic game with puzzle escalation, spatial planning, and shot-path readability.",
+        reviewedAt: "April 29, 2026",
+        embedNote: "The playable frame is included for quick evaluation, but the key value of this page is clarifying the puzzle-first loop before you start.",
         seoSections: [
             {
                 title: "Arrow Escape Puzzle Online Game Overview",
@@ -110,6 +131,17 @@ export const games: Game[] = [
         developer: "GameMonetize",
         reviewSummary: "A perfectly distilled reflex shooter that captures the tension and speed of classic wild west duels.",
         features: ["Browser", "Action", "Shooter", "Western"],
+        editorVerdict: "Robbery Duel works because it strips the whole experience down to timing pressure. The useful question is not content depth but whether you enjoy repeated quick-draw tests with almost no downtime.",
+        bestFor: "Players who want extremely fast action rounds, simple inputs, and a reflex test they can understand in seconds.",
+        sessionLength: "Best in very short 3 to 10 minute bursts because the loop is immediate and repetition is part of the appeal.",
+        playPriority: "Treat this page as a quick verdict page: if split-second reactions are the appeal, the frame below will confirm it fast.",
+        frictionPoints: [
+            "The mechanic is simpler than many shooters, so players expecting progression depth may bounce quickly.",
+            "The real challenge is waiting for the signal instead of reacting early and losing the duel."
+        ],
+        reviewMethod: "Reviewed as a reflex-first duel game centered on reaction windows, fast losses, and rapid replay value.",
+        reviewedAt: "April 29, 2026",
+        embedNote: "The frame below is best used as a quick reflex test after reading the short player-fit summary on this page.",
         seoSections: [
             {
                 title: "Robbery Duel Online Game Overview",
@@ -146,6 +178,17 @@ export const games: Game[] = [
         developer: "GameMonetize",
         reviewSummary: "A chaotic and incredibly fun arcade kart racer that doesn't take itself too seriously.",
         features: ["Browser", "Racing", "Arcade", "Physics"],
+        editorVerdict: "Stickman Kart Hero is strongest as a chaos-racer page. The game is less about simulation driving and more about whether you enjoy unstable tracks, exaggerated collisions, and forgiving arcade momentum.",
+        bestFor: "Players who want light arcade racing, visual chaos, and races that feel more playful than technical.",
+        sessionLength: "Best in 5 to 20 minute sessions where the main appeal is quick races and easy restarts.",
+        playPriority: "Use the page summary to decide if you want arcade instability, then jump into the frame for a few races rather than a long session.",
+        frictionPoints: [
+            "Players expecting precise kart tuning may find the physics too loose.",
+            "The fun depends on accepting messy collisions and exaggerated track behavior."
+        ],
+        reviewMethod: "Reviewed as a browser arcade racer with physics-heavy handling, short race loops, and casual replay value.",
+        reviewedAt: "April 29, 2026",
+        embedNote: "The playable frame is here to test the handling feel, while the page itself explains the arcade-first expectations.",
         seoSections: [
             {
                 title: "Stickman Kart Hero Online Game Overview",
@@ -182,6 +225,17 @@ export const games: Game[] = [
         developer: "GameDistribution",
         reviewSummary: "A beautifully animated and deeply engaging kingdom simulation game that combines farming, crafting, and storytelling.",
         features: ["Browser", "Simulation", "Farming", "Fantasy"],
+        editorVerdict: "Royal Story deserves a page because it has a broader management loop than most quick browser games. The main attraction is layered progression across farming, crafting, and kingdom rebuilding rather than one isolated task.",
+        bestFor: "Players who like slower-building simulation loops, resource management, and fantasy presentation over fast action.",
+        sessionLength: "Best in 15 to 30 minute sessions because the game loop depends on building, waiting, and returning to expanding systems.",
+        playPriority: "Read the setup summary first so you know this is a kingdom-builder loop, not a one-screen casual clicker.",
+        frictionPoints: [
+            "The slower opening can feel heavy if you only want instant action.",
+            "Progress depends on accepting layered resource loops rather than chasing one objective at a time."
+        ],
+        reviewMethod: "Reviewed as a browser simulation game with multi-system progression, quest structure, and long-session management appeal.",
+        reviewedAt: "April 29, 2026",
+        embedNote: "The frame offers a quick look at the flow, but the page value is in setting expectations for the broader builder loop.",
         seoSections: [
             {
                 title: "Royal Story Online Game Overview",
@@ -218,6 +272,17 @@ export const games: Game[] = [
         developer: "GamePix",
         reviewSummary: "A relaxing yet progressively challenging maze runner that tests your spatial memory and logic.",
         features: ["Browser", "Puzzle", "Maze", "Atmospheric"],
+        editorVerdict: "Mazes Draw The Path works best as a low-stress puzzle page. The draw mechanic gives it enough identity that the page should focus on tempo, readability, and steady complexity rather than generic maze language.",
+        bestFor: "Players who want a calmer browser puzzle with visible progression and a more relaxed pace than twitch-heavy games.",
+        sessionLength: "Best in 5 to 15 minute sessions because the loop is easy to enter and supports one-more-level play.",
+        playPriority: "Use the summary to confirm you want a drawing-based maze loop, then test a few stages in the frame to judge the pacing.",
+        frictionPoints: [
+            "The game can look simpler than it feels once obstacle patterns start stacking.",
+            "The experience depends on patience and line planning more than speed."
+        ],
+        reviewMethod: "Reviewed as an atmospheric maze-puzzle with drawing input, rising complexity, and short-session accessibility.",
+        reviewedAt: "April 29, 2026",
+        embedNote: "The browser frame is included for quick hands-on testing, while the editorial layer explains why the pace is calmer than it first appears.",
         seoSections: [
             {
                 title: "Mazes Draw The Path Online Game Overview",
@@ -254,6 +319,17 @@ export const games: Game[] = [
         developer: "MyRealGames",
         reviewSummary: "A visually impressive tower defense game that offers deep strategic placement and satisfying medieval combat.",
         features: ["Browser", "Tower Defense", "Strategy", "Medieval"],
+        editorVerdict: "Defence Wall has more page value as a strategy title than as a spectacle title. The reason to play is placement discipline and wave planning, not just watching a medieval battle animation.",
+        bestFor: "Players who want browser strategy with setup decisions, repeated defense tuning, and a clearer planning layer than most action games.",
+        sessionLength: "Best in 10 to 25 minute sessions because each defense attempt benefits from adjusting placement and timing across runs.",
+        playPriority: "Read the page first if you want to know whether the game leans more toward strategy than reflex combat before opening the frame.",
+        frictionPoints: [
+            "Early failures often come from poor placement logic rather than insufficient firepower.",
+            "The game rewards wave reading and build order more than panic reactions once enemies are on screen."
+        ],
+        reviewMethod: "Reviewed as a tower-defense browser game with strategic placement, escalating enemy pressure, and repeat defense optimization.",
+        reviewedAt: "April 29, 2026",
+        embedNote: "The frame lets you sample the defense loop, but the page context is there to set strategic expectations before play.",
         seoSections: [
             {
                 title: "Defence Wall Online Game Overview",
@@ -650,6 +726,20 @@ export const games: Game[] = [
         developer: "Leafy Games",
         reviewSummary: "A movement-driven horror game that rewards clean grappling lines, composure, and repeat route optimization.",
         features: ["Browser", "Single-player", "WebGL", "Speedrun Friendly"],
+        editorVerdict: "This is strongest as a tension-and-movement page, not as a pure embed page. The real hook is the pressure created by route discipline, recovery choices, and repeated failed runs that teach cleaner traversal.",
+        bestFor: "Players who like movement-heavy first-person games, short repeat attempts, and games that feel better after route study than after blind improvisation.",
+        sessionLength: "Best in 10 to 25 minute repeat sessions where each run teaches one movement or recovery lesson.",
+        playPriority: "Start with one direct play attempt, then move into the guide and wiki before committing to longer survival runs.",
+        frictionPoints: [
+            "New players over-correct the camera during unstable swings and lose clean landing angles.",
+            "The game punishes panic movement, so route-reading matters more than constant speed.",
+            "Improvement comes from repeated sections and note-taking, not from generic full-run retries."
+        ],
+        reviewMethod: "Reviewed as a movement-first horror page with direct browser play, support-route pages, and practical run-planning context.",
+        reviewedAt: "April 29, 2026",
+        embedNote: "The browser build is included as a convenience, but the main value of this page is the route, movement, and support context around the game.",
+        editorialImage: "/games/editorial/idols-of-ash-editorial.png",
+        editorialImageAlt: "Idols of Ash editorial infographic highlighting movement-first horror, route discipline, and short repeat runs.",
     },
     {
         slug: "dashmetry",
@@ -898,6 +988,20 @@ export const games: Game[] = [
         releaseDate: "September 10, 2025",
         reviewSummary: "1Games lists Bullet Train II as an HTML5 action shooter with dash movement, gravity switching, boss fights, and browser support across desktop, tablet, and mobile.",
         features: ["Browser", "HTML5", "Action", "Shooting"],
+        editorVerdict: "Bullet Train II stands out because its pressure comes from layered movement inputs, not just from aiming. Gravity switching and dash timing make it feel closer to a projectile survival challenge than a generic browser shooter.",
+        bestFor: "Players who want dense short-form action, fast retries, and boss fights that reward pattern reading more than loadout planning.",
+        sessionLength: "Works best in short 5 to 15 minute bursts because the action loop is immediate and failure states are easy to learn from.",
+        playPriority: "Use this page to understand the control load first, then treat the embed as a quick reaction test rather than a long progression game.",
+        frictionPoints: [
+            "The combined aim, dash, and gravity inputs make the first few minutes harder than the screenshots suggest.",
+            "Projectile pressure rises quickly, so players who tunnel on shooting tend to lose positioning.",
+            "Boss encounters reward memorizing movement windows more than raw aggression."
+        ],
+        reviewMethod: "Reviewed against the published control list, movement loop, boss-focus description, and browser-supported platform notes on the public source page.",
+        reviewedAt: "April 29, 2026",
+        embedNote: "The playable frame is secondary to the control breakdown and reaction-game context summarized here.",
+        editorialImage: "/games/editorial/bullet-train-ii-editorial.png",
+        editorialImageAlt: "Bullet Train II editorial infographic highlighting gravity switching, projectile pressure, and fast retry loops.",
         seoSections: [
             {
                 title: "Bullet Train II Online Game Overview",
@@ -954,6 +1058,17 @@ export const games: Game[] = [
         isPopular: false,
         reviewSummary: "1Games describes Obbyroads.io as an HTML5 driving and platform game with floating tracks, race modes, challenge modes, and browser support on desktop, tablet, and mobile.",
         features: ["Browser", "HTML5", "Driving", "Multiplayer"],
+        editorVerdict: "Obbyroads.io is useful as a hybrid-comparison page because it is not a standard driving game. The distinctive part is how much of the challenge comes from balance, jumps, and track survival rather than racing lines alone.",
+        bestFor: "Players who like arcade driving but want platforming pressure, floating tracks, and more route risk than a normal racer.",
+        sessionLength: "Best in 5 to 20 minute sessions where you can sample multiple modes without treating it like a full sim-racing commitment.",
+        playPriority: "Read the mode and handling summary first so you know this is closer to an obstacle racer than a standard browser driving game.",
+        frictionPoints: [
+            "Players expecting stable track grip may struggle with the obby-style hazard design.",
+            "The jump and balance elements matter almost as much as raw speed."
+        ],
+        reviewMethod: "Reviewed as a driving-platform hybrid with multi-mode browser play, unstable tracks, and hazard-led route pressure.",
+        reviewedAt: "April 29, 2026",
+        embedNote: "The frame below is useful for testing the handling, but the page context explains why the game sits between racing and obstacle play.",
         seoSections: [
             {
                 title: "Obbyroads.io Online Game Overview",
@@ -1352,6 +1467,20 @@ export const games: Game[] = [
         releaseDate: "April 2026",
         reviewSummary: "8Games presents Zone Survival: Artifact Hunt as a survival shooter where the player explores the Zone after a helicopter crash, follows radio guidance, searches for supplies, fights mutants and looters, and recovers artifacts from anomalies.",
         features: ["Browser", "HTML5", "Unity WebGL", "Survival Shooter"],
+        editorVerdict: "This page works best when framed as a scavenging route-and-risk game rather than as a generic shooter. The distinct value is the mix of hostile terrain, supply search, and evacuation pressure.",
+        bestFor: "Players who like survival shooters with scavenging, cautious movement, and a stronger sense of place than a simple wave-based action game.",
+        sessionLength: "Best approached in 15 to 30 minute sessions because the game loop depends on searching, repositioning, and surviving through multiple dangerous locations.",
+        playPriority: "Read the route summary before launching the browser build so the scavenging and anomaly loop makes sense from the start.",
+        frictionPoints: [
+            "Players who rush markers without searching structures will likely run short on supplies.",
+            "The tension comes from layered hazards, so treating it like a straight corridor shooter usually backfires.",
+            "Artifacts and anomalies matter to the identity of the game, not just the combat."
+        ],
+        reviewMethod: "Reviewed as a survival-shooter page with emphasis on scavenging, route markers, anomalies, and evacuation pressure described on the public source page.",
+        reviewedAt: "April 29, 2026",
+        embedNote: "The browser frame is offered as a convenience, while the main page value is the sourced breakdown of the survival loop and player expectations.",
+        editorialImage: "/games/editorial/zone-survival-artifact-hunt-editorial.png",
+        editorialImageAlt: "Zone Survival Artifact Hunt editorial infographic highlighting scavenging, anomaly routes, and evacuation pressure.",
         seoSections: [
             {
                 title: "Zone Survival: Artifact Hunt Online Overview",

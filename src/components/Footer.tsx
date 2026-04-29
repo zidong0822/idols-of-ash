@@ -24,7 +24,7 @@ export function Footer() {
                 </div>
 
                 {/* Links Area */}
-                <div className="grid grid-cols-2 gap-8 sm:gap-16">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-16">
                     <div>
                         <h4 className="text-white font-bold mb-6 tracking-wider">PAGES</h4>
                         <ul className="space-y-3 text-sm">
@@ -39,6 +39,16 @@ export function Footer() {
                         <h4 className="text-white font-bold mb-6 tracking-wider">SUPPORT</h4>
                         <ul className="space-y-3 text-sm">
                             <li><Link href="/about-us" className="text-[var(--color-text-muted)] hover:text-white transition-colors">About Us</Link></li>
+                            <li><Link href="/how-we-review-games" className="text-[var(--color-text-muted)] hover:text-white transition-colors">How We Review Games</Link></li>
+                            <li><Link href="/contact" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Contact</Link></li>
+                            <li><Link href="/privacy-policy" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/terms-of-service" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Terms of Service</Link></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-white font-bold mb-6 tracking-wider">RESOURCES</h4>
+                        <ul className="space-y-3 text-sm">
                             <li><Link href="/games/idols-of-ash/guide" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Guide</Link></li>
                             <li><Link href="/games/idols-of-ash/achievements" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Achievements</Link></li>
                             <li><Link href="/games/idols-of-ash/wiki" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Wiki</Link></li>
