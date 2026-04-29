@@ -4,15 +4,19 @@ import { AlertCircle, Heart, Share2, ThumbsDown, ThumbsUp } from "lucide-react";
 import { GameGridSection } from "@/components/GameGridSection";
 import { GamePlayer } from "@/components/GamePlayer";
 import { StructuredData } from "@/components/StructuredData";
-import { games, getGamesByFlag, idolsOfAshGuideSections, getPlayableGameSrc } from "@/data/games";
+import { games, getGameBySlug, idolsOfAshGuideSections, getPlayableGameSrc } from "@/data/games";
 import { indexedGameSlugs } from "@/lib/indexed-pages";
 import { buildItemListSchema, buildWebsiteSchema, toAbsoluteUrl } from "@/lib/schema";
 
 
 
-const idolsOfAsh = games[0];
+const idolsOfAsh = getGameBySlug("idols-of-ash");
 
 export default function Home() {
+    if (!idolsOfAsh) {
+        throw new Error("Missing idols-of-ash game data");
+    }
+
     const indexedGames = games.filter((game) => indexedGameSlugs.includes(game.slug as (typeof indexedGameSlugs)[number]));
     const featuredGames = indexedGames.filter((game) => game.slug !== "idols-of-ash");
     const websiteSchema = buildWebsiteSchema();
