@@ -59,6 +59,582 @@ export interface GadgetItem {
 
 export const games: Game[] = [
     {
+        slug: "arrow-escape-puzzle",
+        title: "Arrow Escape Puzzle",
+        tag: "HOT",
+        img: "/games/covers/arrow-escape-puzzle.png",
+        description: "Arrow Escape Puzzle is a challenging logic game where you must shoot glowing arrows through a complex 3D labyrinth, solving spatial puzzles to find the exit.",
+        summary: "Shoot glowing arrows through a labyrinth to solve spatial puzzles and find the exit.",
+        iframeSrc: "https://html5.gamedistribution.com/fdbf380d1035480482a3133391a6360d/",
+        categories: ["puzzle", "browser-games", "logic"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "GameDistribution",
+        reviewSummary: "An excellent logic puzzle game that creatively uses archery mechanics to test your spatial reasoning.",
+        features: ["Browser", "Puzzle", "Logic", "Atmospheric"],
+        seoSections: [
+            {
+                title: "Arrow Escape Puzzle Online Game Overview",
+                paragraphs: [
+                    "Arrow Escape Puzzle is a unique take on the labyrinth genre. Instead of physically walking through a maze, players must calculate angles, anticipate ricochets, and shoot magical glowing arrows to trigger switches and open doors. Searchers looking for Arrow Escape Puzzle online or logic browser games will find a mentally stimulating and visually atmospheric experience.",
+                    "The puzzles become increasingly complex, introducing portals, moving obstacles, and limited ammunition. This forces you to think several steps ahead before releasing your bowstring, ensuring that every successful shot feels incredibly rewarding."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Arrow Escape Puzzle?",
+                answer: "It is a logic game where you solve labyrinth puzzles by shooting glowing arrows to hit specific targets or switches."
+            },
+            {
+                question: "How do you play Arrow Escape Puzzle?",
+                answer: "You aim your bow and calculate the trajectory of your arrow, taking into account walls and obstacles to ensure it reaches its destination."
+            }
+        ]
+    },
+    {
+        slug: "robbery-duel",
+        title: "Robbery Duel",
+        tag: "HOT",
+        img: "/games/covers/robbery-duel.png",
+        description: "Robbery Duel is a tense western shootout game where you face off against rival bank robbers in high-noon standoffs, relying on quick reflexes and sharp aim to survive.",
+        summary: "A tense western shootout game featuring high-noon duels and reflex-based combat.",
+        iframeSrc: "https://html5.gamemonetize.co/apums0nyjpefmxil8xrayb4lnudb3wbe/",
+        categories: ["action", "browser-games", "shooting"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "GameMonetize",
+        reviewSummary: "A perfectly distilled reflex shooter that captures the tension and speed of classic wild west duels.",
+        features: ["Browser", "Action", "Shooter", "Western"],
+        seoSections: [
+            {
+                title: "Robbery Duel Online Game Overview",
+                paragraphs: [
+                    "Robbery Duel places you in the dusty boots of a wild west outlaw engaged in deadly standoffs. This is a game of pure reaction time. You must wait for the exact moment the signal is given, draw your revolver, and fire before your opponent does. Players searching for Robbery Duel online or western browser shooters will find an adrenaline-pumping experience that tests their raw reflexes.",
+                    "As you defeat rival robbers, you earn bounties that can be spent on customizing your character and unlocking new, faster-firing revolvers. The escalating difficulty ensures that only the quickest draws survive to become the most notorious outlaw."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Robbery Duel?",
+                answer: "It is a wild west shooting game focused entirely on quick-draw duels against other outlaws."
+            },
+            {
+                question: "How do you win in Robbery Duel?",
+                answer: "By waiting for the signal and clicking as quickly as possible to shoot your opponent before they shoot you."
+            }
+        ]
+    },
+    {
+        slug: "stickman-kart-hero",
+        title: "Stickman Kart Hero",
+        tag: "HOT",
+        img: "/games/covers/stickman-kart-hero.png",
+        description: "Stickman Kart Hero is a wacky, physics-based racing game where you drift, boost, and crash your way across bizarre tracks to become the ultimate karting champion.",
+        summary: "A wacky, physics-based kart racing game featuring stickman characters and chaotic tracks.",
+        iframeSrc: "https://html5.gamemonetize.co/ju0qzw6fpcb0mctu71i85cge96sq47sb/",
+        categories: ["racing-driving", "browser-games", "arcade"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "GameMonetize",
+        reviewSummary: "A chaotic and incredibly fun arcade kart racer that doesn't take itself too seriously.",
+        features: ["Browser", "Racing", "Arcade", "Physics"],
+        seoSections: [
+            {
+                title: "Stickman Kart Hero Online Game Overview",
+                paragraphs: [
+                    "Stickman Kart Hero brings chaotic arcade racing to the browser. You control a stickman driver in a highly customizable kart, racing against AI opponents on tracks that defy gravity and logic. With power-ups, massive jumps, and a bouncy physics engine, searchers looking for Stickman Kart Hero online or casual racing games are guaranteed a fun, unpredictable ride.",
+                    "The game features a full campaign mode where you can unlock new characters, kart bodies, and flashy paint jobs by winning races. Mastering the drift mechanics and knowing when to use your speed boosts are crucial for crossing the finish line first."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Stickman Kart Hero?",
+                answer: "It is a casual 3D kart racing game where players drive on wacky tracks, collect power-ups, and compete to finish first."
+            },
+            {
+                question: "Can you customize your kart?",
+                answer: "Yes, by winning races you unlock currency that can be spent on upgrading your kart's performance and changing its appearance."
+            }
+        ]
+    },
+    {
+        slug: "royal-story",
+        title: "Royal Story",
+        tag: "HOT",
+        img: "/games/covers/royal-story.png",
+        description: "Royal Story is a magical fantasy kingdom builder where you restore a ruined castle, harvest crops, craft enchanted items, and protect your realm from an evil witch.",
+        summary: "A magical kingdom builder where you restore a ruined castle and manage your kingdom's resources.",
+        iframeSrc: "https://html5.gamedistribution.com/0523d5b3721f4878a784fe30f4067c2d/",
+        categories: ["simulation", "browser-games", "casual"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "GameDistribution",
+        reviewSummary: "A beautifully animated and deeply engaging kingdom simulation game that combines farming, crafting, and storytelling.",
+        features: ["Browser", "Simulation", "Farming", "Fantasy"],
+        seoSections: [
+            {
+                title: "Royal Story Online Game Overview",
+                paragraphs: [
+                    "Royal Story is a comprehensive kingdom simulation game that casts you as a young monarch tasked with restoring your lands after an evil curse. Players must manage resources by planting crops, raising animals, and repairing production buildings. Searchers looking for Royal Story online or fantasy farming games will be charmed by its detailed art style and rewarding progression loop.",
+                    "Beyond basic farming, you will also interact with a cast of magical characters, complete story-driven quests, and periodically defend your borders from the evil witch's minions. It offers a perfect blend of casual resource management and engaging narrative progression."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Royal Story?",
+                answer: "Royal Story is a fantasy simulation game where you rebuild a kingdom by farming, crafting, and completing story quests."
+            },
+            {
+                question: "How do you progress in Royal Story?",
+                answer: "By managing your energy, planting and harvesting crops, and using those resources to fulfill quest requirements and upgrade your castle."
+            }
+        ]
+    },
+    {
+        slug: "mazes-draw-the-path",
+        title: "Mazes Draw The Path",
+        tag: "HOT",
+        img: "/games/covers/mazes-draw-the-path.png",
+        description: "Mazes Draw The Path is an atmospheric puzzle game where players must trace glowing lines through intricate 3D labyrinths to unlock ancient doors and discover hidden secrets.",
+        summary: "Trace glowing paths through complex 3D labyrinths in this atmospheric puzzle adventure.",
+        iframeSrc: "https://play.gamepix.com/mazes-draw-the-path/embed?sid=6A0TS",
+        categories: ["puzzle", "browser-games", "casual"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "GamePix",
+        reviewSummary: "A relaxing yet progressively challenging maze runner that tests your spatial memory and logic.",
+        features: ["Browser", "Puzzle", "Maze", "Atmospheric"],
+        seoSections: [
+            {
+                title: "Mazes Draw The Path Online Game Overview",
+                paragraphs: [
+                    "Mazes Draw The Path elevates the classic maze genre by introducing a unique drawing mechanic. Instead of simply guiding a character, players must trace the correct path using a continuous, glowing line that illuminates the dark labyrinth. This adds a layer of visual satisfaction and spatial challenge. Searchers looking for Mazes Draw The Path online or atmospheric puzzle games will find a relaxing yet mentally stimulating experience.",
+                    "The game features dozens of handcrafted levels that gradually introduce new obstacles, moving walls, and multiple exit points. The minimalist design and soothing ambient soundtrack make it the perfect browser game to unwind with after a long day."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Mazes Draw The Path?",
+                answer: "It is an atmospheric puzzle game where you solve complex 3D labyrinths by drawing a continuous glowing line from the start to the finish."
+            },
+            {
+                question: "How do you play Mazes Draw The Path?",
+                answer: "Use your mouse or touchscreen to trace a path through the maze without hitting dead ends or obstacles."
+            }
+        ]
+    },
+    {
+        slug: "defence-wall",
+        title: "Defence Wall",
+        tag: "HOT",
+        img: "/games/covers/defence-wall.png",
+        description: "Defence Wall is an epic medieval tower defense game where you must strategically place archers, catapults, and magic traps along your stronghold's walls to repel endless hordes of invaders.",
+        summary: "A medieval tower defense game where you fortify your castle walls against endless waves of enemies.",
+        iframeSrc: "https://html5.gamemonetize.co/lpmgjrafsc7mod4ef33pvhxd0pbplwzm/",
+        categories: ["strategy", "browser-games", "action"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "MyRealGames",
+        reviewSummary: "A visually impressive tower defense game that offers deep strategic placement and satisfying medieval combat.",
+        features: ["Browser", "Tower Defense", "Strategy", "Medieval"],
+        seoSections: [
+            {
+                title: "Defence Wall Online Game Overview",
+                paragraphs: [
+                    "Defence Wall puts you in command of a massive medieval fortress under siege. In this classic tower defense game, your primary objective is to stop waves of goblins, orcs, and siege engines from breaking through your outer walls. You do this by strategically spending gold to deploy archers, upgrade battlements, and cast devastating spells. Searchers looking for Defence Wall online or medieval strategy games will find a robust and challenging tactical experience.",
+                    "What sets Defence Wall apart is the sheer scale of the battles and the variety of defensive options available. You must constantly adapt your strategy to counter different types of enemies, such as heavily armored knights or fast-moving cavalry, making every wave a frantic test of your tactical planning."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Defence Wall?",
+                answer: "Defence Wall is a strategic tower defense game where you protect a medieval fortress by deploying troops and traps along the walls."
+            },
+            {
+                question: "How do you win in Defence Wall?",
+                answer: "By carefully managing your resources to upgrade your defenses and strategically placing archers and artillery to counter specific enemy types."
+            }
+        ]
+    },
+    {
+        slug: "obby-world-champions",
+        title: "Obby World Champions",
+        tag: "HOT",
+        img: "/games/covers/obby-world-champions.png",
+        description: "Obby World Champions is a vibrant, competitive obstacle course game inspired by Roblox, where players race through sky-high platforms and treacherous traps to claim the ultimate trophy.",
+        summary: "A fast-paced competitive obstacle course game featuring vibrant 3D levels and tricky jumps.",
+        iframeSrc: "https://play.gamepix.com/obby-world-champions/embed?sid=6A0TS",
+        categories: ["platform", "browser-games", "multiplayer"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "GamePix",
+        reviewSummary: "A fantastic browser-based 'obby' that perfectly captures the speedrunning thrill of classic Roblox obstacle courses.",
+        features: ["Browser", "Platformer", "Obby", "Action"],
+        seoSections: [
+            {
+                title: "Obby World Champions Online Game Overview",
+                paragraphs: [
+                    "Obby World Champions brings the wildly popular 'obstacle course' genre to the browser in a highly polished 3D environment. Players must navigate treacherous floating platforms, dodge spinning lasers, and perfectly time their jumps to reach the finish line in record time. Searchers looking for Obby World Champions online or browser obby games will feel right at home with the game's vibrant aesthetics and tight platforming controls.",
+                    "The game is designed for both casual players and speedrunners. While simply finishing a course is an achievement, the real challenge lies in shaving seconds off your time to climb the global leaderboards and prove you are the ultimate Obby World Champion."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Obby World Champions?",
+                answer: "It is a 3D platforming game where players race through complex obstacle courses suspended in the sky."
+            },
+            {
+                question: "What does 'Obby' mean?",
+                answer: "'Obby' is a popular gaming term derived from 'obstacle course', commonly associated with user-generated platforming levels."
+            }
+        ]
+    },
+    {
+        slug: "pushio",
+        title: "Pushio",
+        tag: "HOT",
+        img: "/games/covers/pushio.png",
+        description: "Pushio is a chaotic multiplayer battle royale where players control sumo-style characters, desperately trying to push opponents off a shrinking platform to be the last one standing.",
+        summary: "A multiplayer IO game where the goal is to push everyone else off the arena to survive.",
+        iframeSrc: "https://html5.gamedistribution.com/4888156f33814739a696e11b32556159/",
+        categories: ["io-games", "browser-games", "multiplayer"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "GameDistribution",
+        reviewSummary: "A hilarious and frantic IO game that distills battle royale mechanics into pure, physics-based pushing combat.",
+        features: ["Browser", "Multiplayer", "IO Game", "Physics"],
+        seoSections: [
+            {
+                title: "Pushio Online Game Overview",
+                paragraphs: [
+                    "Pushio is an intensely competitive and highly addictive multiplayer IO game. The premise is simple: you are placed on an elevated arena with other players, and your objective is to use momentum and physics to push them off the edge. Searchers looking for Pushio online or multiplayer pushing games will immediately fall in love with its chaotic, fast-paced rounds.",
+                    "As you eliminate other players, your character grows in size and strength, making you harder to push but also a bigger target. The tension ramps up as the arena slowly shrinks, forcing the remaining players into close-quarters sumo battles where one wrong move means elimination."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Pushio?",
+                answer: "Pushio is a multiplayer browser game where players control characters in an arena and try to push each other off the edge."
+            },
+            {
+                question: "How do you win in Pushio?",
+                answer: "By building momentum to knock opponents off the platform while avoiding getting pushed off yourself, surviving until you are the last player remaining."
+            }
+        ]
+    },
+    {
+        slug: "geosmarty",
+        title: "Geosmarty",
+        tag: "HOT",
+        img: "/games/covers/geosmarty.png",
+        description: "Geosmarty is an engaging educational geography puzzle game that challenges players to test their knowledge of world maps, countries, and capitals in a fun, interactive way.",
+        summary: "A fun educational puzzle game focused on geography, countries, and map reading.",
+        iframeSrc: "https://play.gamepix.com/geosmarty/embed?sid=6A0TS",
+        categories: ["educational", "browser-games", "puzzle"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "MyRealGames",
+        reviewSummary: "An excellent tool for learning world geography wrapped in an entertaining and accessible puzzle format.",
+        features: ["Browser", "Educational", "Puzzle", "Geography"],
+        seoSections: [
+            {
+                title: "Geosmarty Online Game Overview",
+                paragraphs: [
+                    "Geosmarty seamlessly blends education with entertainment, offering players a fantastic way to brush up on their geography skills. In this interactive puzzle game, players are tasked with identifying countries, matching flags, and locating capitals on a beautifully rendered 3D globe. Searchers looking for Geosmarty online or geography browser games will find a rich educational tool that feels like a game first and a lesson second.",
+                    "The difficulty scales as you progress, moving from well-known continents to more obscure regions of the world. This makes it perfect for both children learning geography for the first time and adults looking to test their worldly knowledge in a casual browser environment."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Geosmarty?",
+                answer: "Geosmarty is an educational puzzle game where players test their geography knowledge by identifying countries and capitals on a map."
+            },
+            {
+                question: "Is Geosmarty good for learning?",
+                answer: "Yes, it is designed to be an interactive and fun way to learn world geography, suitable for players of all ages."
+            }
+        ]
+    },
+    {
+        slug: "steel-advance",
+        title: "Steel Advance",
+        tag: "HOT",
+        img: "/games/covers/steel-advance.png",
+        description: "Steel Advance is a tactical sci-fi tank battle game where you command heavily armored futuristic vehicles in explosive arena combat against enemy forces.",
+        summary: "A tactical 3D sci-fi tank combat game with explosive action and strategic positioning.",
+        iframeSrc: "https://html5.gamemonetize.co/7q4e5a8rhdg12at56tgbnef4ao8abvqr/",
+        categories: ["action", "browser-games", "shooting"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "MyRealGames",
+        reviewSummary: "A satisfying and explosive tank combat simulator that requires both quick reflexes and tactical positioning.",
+        features: ["Browser", "Tank Battle", "Action", "Sci-Fi"],
+        seoSections: [
+            {
+                title: "Steel Advance Online Game Overview",
+                paragraphs: [
+                    "Steel Advance throws players into the cockpit of futuristic tanks for intense, tactical arena battles. You must navigate ruined cityscapes and desolate battlefields, using cover and strategy to outmaneuver enemy armor. Searchers looking for Steel Advance online or sci-fi tank games will appreciate the game's heavy, impactful combat mechanics and high-quality 3D visuals.",
+                    "Success in Steel Advance isn't just about shooting; it requires careful resource management and spatial awareness. You must angle your armor to deflect shots, manage your ammunition, and know when to advance or retreat. The game offers a satisfying progression system where you can upgrade your tank's weapons and defenses between missions."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Steel Advance?",
+                answer: "Steel Advance is a sci-fi action game where you command futuristic tanks in tactical arena combat against enemy forces."
+            },
+            {
+                question: "How do you win battles in Steel Advance?",
+                answer: "By using environmental cover, angling your tank's armor, and strategically upgrading your weapons between missions."
+            }
+        ]
+    },
+    {
+        slug: "bus-escape-clear-jam",
+        title: "Bus Escape Clear Jam",
+        tag: "HOT",
+        img: "/games/covers/bus-escape-clear-jam.png",
+        description: "Bus Escape Clear Jam is a brain-teasing traffic puzzle game where you must strategically move buses and cars to clear the gridlock and free the trapped vehicles.",
+        summary: "A spatial puzzle game where you solve traffic jams by moving vehicles in the correct order.",
+        iframeSrc: "https://play.gamepix.com/bus-escape-clear-jam/embed?sid=6A0TS",
+        categories: ["puzzle", "browser-games", "casual"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "GamePix",
+        reviewSummary: "A highly addictive spatial puzzle game that turns the frustration of traffic jams into a satisfying brain teaser.",
+        features: ["Browser", "Puzzle", "Logic", "Casual"],
+        seoSections: [
+            {
+                title: "Bus Escape Clear Jam Online Game Overview",
+                paragraphs: [
+                    "Bus Escape Clear Jam takes the classic sliding puzzle concept and applies it to a crowded city intersection. Players are presented with a gridlocked scenario full of buses and cars, and must figure out the exact sequence of moves required to free the designated vehicles. Players searching for Bus Escape Clear Jam online or traffic puzzle games will find an incredibly addictive and progressively challenging experience.",
+                    "The game starts simple but quickly ramps up in complexity, introducing new vehicle types, longer buses that take up more space, and tighter intersections. It requires spatial reasoning and forward-thinking, making it a perfect casual brain-teaser for short gaming sessions."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Bus Escape Clear Jam?",
+                answer: "It is a logic puzzle game where you must slide vehicles out of the way to clear a path and resolve a traffic jam."
+            },
+            {
+                question: "How do you play Bus Escape Clear Jam?",
+                answer: "You click and drag cars and buses to move them forward or backward, creating empty space so the trapped vehicles can escape the grid."
+            }
+        ]
+    },
+    {
+        slug: "color-surfer",
+        title: "Color Surfer",
+        tag: "HOT",
+        img: "/games/covers/color-surfer.png",
+        description: "Color Surfer is a rhythm-based running game where you glide across a vibrant neon landscape, matching colors and dodging obstacles to the beat.",
+        summary: "A fast-paced neon running game where color matching and quick reflexes are the keys to survival.",
+        iframeSrc: "https://color-surfer.1games.io/",
+        categories: ["arcade", "browser-games", "platform"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "Geometry Games",
+        reviewSummary: "A visually stunning running game that combines tight platforming with color-matching mechanics for a unique rhythm challenge.",
+        features: ["Browser", "Single-player", "Arcade", "Rhythm"],
+        seoSections: [
+            {
+                title: "Color Surfer Online Game Overview",
+                paragraphs: [
+                    "Color Surfer offers an exhilarating mix of endless running and color-matching mechanics set in a stunning neon 3D world. Players must quickly react to upcoming obstacles by changing their character's color to match the platforms they land on. This creates a highly engaging loop of rapid decision-making and precise timing. Searchers looking for Color Surfer online or neon running games will find a challenging and visually striking arcade experience.",
+                    "The game's dynamic soundtrack syncs perfectly with the gameplay, giving players auditory cues that help them anticipate upcoming color switches and jumps. As you progress, the speed increases and the patterns become more complex, requiring deep focus and rhythm."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Color Surfer?",
+                answer: "Color Surfer is a fast-paced browser game where you must match your character's color to the platforms you land on while running through a neon obstacle course."
+            },
+            {
+                question: "How do you play Color Surfer?",
+                answer: "You switch colors to safely land on matching platforms and jump over gaps, reacting quickly as the game speeds up."
+            }
+        ]
+    },
+    {
+        slug: "cheat-or-repeat",
+        title: "Cheat Or Repeat",
+        tag: "HOT",
+        img: "/games/covers/cheat-or-repeat.png",
+        description: "Cheat Or Repeat is a mind-bending puzzle platformer where breaking the rules and finding unintended paths is the only way to escape the loop.",
+        summary: "An abstract puzzle platformer that challenges you to find exploits and hidden paths to progress.",
+        iframeSrc: "https://cheat-or-repeat.1games.io/",
+        categories: ["platform", "browser-games", "puzzle"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "Geometry Dash Lite 2",
+        reviewSummary: "A clever platformer that turns game glitches and level exploits into core mechanics.",
+        features: ["Browser", "Single-player", "Puzzle", "Platformer"],
+        seoSections: [
+            {
+                title: "Cheat Or Repeat Online Game Overview",
+                paragraphs: [
+                    "Cheat Or Repeat flips the traditional platformer on its head by actively encouraging players to 'cheat' to win. Instead of following the obvious path, you must look for glitches, hidden mechanics, and structural weaknesses in the level design to break out of repeating loops. Players searching for Cheat Or Repeat online will discover a game that rewards out-of-the-box thinking and rule-breaking.",
+                    "Every level is a puzzle where the obvious solution is usually a trap. You'll need to use unconventional jumping techniques and interact with the environment in unexpected ways to progress. It's a fresh take on the platforming genre that challenges your assumptions about how browser games should work."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Cheat Or Repeat?",
+                answer: "Cheat Or Repeat is a puzzle platformer where you must find hidden exploits and break the level's rules to escape infinite loops."
+            },
+            {
+                question: "How do you win in Cheat Or Repeat?",
+                answer: "By ignoring the intended path and finding clever ways to bypass obstacles, such as using glitches or hidden shortcuts."
+            }
+        ]
+    },
+    {
+        slug: "traffic-racing",
+        title: "Traffic Racing",
+        tag: "HOT",
+        img: "/games/covers/traffic-racing.png",
+        description: "Traffic Racing is an adrenaline-fueled highway driving game where you weave through dense traffic at breakneck speeds to earn points and upgrade your car.",
+        summary: "A high-speed highway racing game where close calls and fast reflexes earn you cash for better cars.",
+        iframeSrc: "https://html5.gamedistribution.com/f3ee6674b4ea4579aeefd54d7bf388f0/",
+        categories: ["racing-driving", "browser-games", "arcade"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "Rocket Games",
+        reviewSummary: "A thrilling highway survival racer that perfectly captures the tension of weaving through dense traffic at high speed.",
+        features: ["Browser", "Racing", "Upgrades", "Action"],
+        seoSections: [
+            {
+                title: "Traffic Racing Online Game Overview",
+                paragraphs: [
+                    "Traffic Racing puts you behind the wheel of a high-performance car on a busy highway, challenging you to drive as fast as possible without crashing. The closer you shave past other vehicles, the more points and cash you earn. Players searching for Traffic Racing online or highway driving games will find a tense, highly replayable arcade experience that rewards daring maneuvers and split-second reflexes.",
+                    "The cash you earn from your dangerous driving can be used to unlock new vehicles and upgrade your current ride's speed, handling, and braking. This creates a satisfying progression loop where taking bigger risks on the road allows you to access faster and more capable cars."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Traffic Racing?",
+                answer: "Traffic Racing is an endless arcade driving game where you steer through highway traffic at high speeds to earn points and cash."
+            },
+            {
+                question: "How do you upgrade cars in Traffic Racing?",
+                answer: "You earn money by driving fast and performing near-misses with other vehicles, which can then be spent in the garage on upgrades and new cars."
+            }
+        ]
+    },
+    {
+        slug: "sausage-battle",
+        title: "Sausage Battle",
+        tag: "HOT",
+        img: "/games/covers/sausage-battle.png",
+        description: "Sausage Battle is a chaotic, fast-paced action game where you battle against other sausage warriors to survive and emerge victorious in a culinary arena.",
+        summary: "A fast-paced multiplayer action game where sausage characters fight for survival in a chaotic food-themed arena.",
+        iframeSrc: "https://gamea.azgame.io/sausage-battle/",
+        categories: ["action", "browser-games", "multiplayer"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "Azgames",
+        reviewSummary: "A hilarious and intense multiplayer action game that turns sausage combat into a test of reflexes and strategy.",
+        features: ["Browser", "Multiplayer", "Action", "Humor"],
+        seoSections: [
+            {
+                title: "Sausage Battle Online Game Overview",
+                paragraphs: [
+                    "Sausage Battle is a fast-paced multiplayer action game that throws players into a chaotic culinary arena. As a sausage warrior, your goal is to survive against other players by dodging attacks and striking at the perfect moment. The game combines humor with intense reflex-based combat, making it a highly engaging experience for fans of casual browser action games. Searchers looking for Sausage Battle online or Sausage Battle browser game will find exactly what they expect: quick rounds, funny character designs, and accessible gameplay.",
+                    "The mechanics are straightforward but require precise timing to master. You navigate around the battlefield, avoiding hazards and outmaneuvering opponents to land the winning hit. This simplicity ensures that anyone can jump into Sausage Battle without a steep learning curve, while the competitive nature keeps players returning for more matches."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Sausage Battle?",
+                answer: "Sausage Battle is a multiplayer browser action game where players control sausage warriors fighting for survival in an arena."
+            },
+            {
+                question: "How do you play Sausage Battle?",
+                answer: "Players move their sausage character around the arena, avoiding enemy attacks and striking at the right time to defeat opponents."
+            }
+        ]
+    },
+    {
+        slug: "luckyblocks-io",
+        title: "Luckyblocks.io",
+        tag: "HOT",
+        img: "/games/covers/luckyblocks-io.png",
+        description: "Luckyblocks.io is an expansive multiplayer sandbox game where players explore voxel worlds, break lucky blocks for unpredictable rewards, and compete to build the ultimate adventure.",
+        summary: "A multiplayer voxel sandbox game focused on breaking lucky blocks, gathering resources, and building creative structures.",
+        iframeSrc: "https://luckyblocks.io/",
+        categories: ["adventure", "browser-games", "multiplayer"],
+        isHot: true,
+        isNew: true,
+        isPopular: true,
+        releaseDate: "2026",
+        developer: "Luckyblocks.io",
+        reviewSummary: "An unpredictable voxel adventure where every block broken could mean a massive reward or a sudden challenge.",
+        features: ["Browser", "Multiplayer", "Voxel World", "Sandbox"],
+        seoSections: [
+            {
+                title: "Luckyblocks.io Online Game Overview",
+                paragraphs: [
+                    "Luckyblocks.io takes the familiar voxel sandbox genre and adds an element of pure unpredictability through its lucky blocks system. In this browser game, players explore expansive 3D worlds, mining blocks to discover whether they contain valuable resources, powerful gear, or unexpected hazards. This mechanic creates a constant loop of risk and reward that drives exploration. Players searching for Luckyblocks.io online or voxel browser games will find a rich, multiplayer environment where creativity and luck go hand in hand.",
+                    "The game also features a strong community aspect. You can collaborate with others to build massive structures or compete to amass the most valuable loot. The continuous addition of new block types and environments ensures that the sandbox remains fresh and engaging, encouraging players to return and see what their next lucky break might bring."
+                ]
+            }
+        ],
+        faqItems: [
+            {
+                question: "What is Luckyblocks.io?",
+                answer: "Luckyblocks.io is a multiplayer voxel sandbox game where players break special blocks to receive random rewards or face challenges."
+            },
+            {
+                question: "What happens when you break a lucky block?",
+                answer: "Breaking a lucky block can yield anything from rare resources and powerful items to dangerous traps or enemies, making every action unpredictable."
+            }
+        ]
+    },
+    {
         slug: "idols-of-ash",
         title: "Idols of Ash",
         tag: "HOT",
