@@ -94,11 +94,14 @@ export default function RootLayout({
                         </div>
 
                         <div className="hidden sm:flex items-center gap-3 text-sm">
-                            <a href="/hot-games" className="px-3 py-2 rounded-sm border border-[var(--color-border-main)]/80 text-[var(--color-text-main)] hover:text-white hover:bg-[var(--color-card)] transition-colors">
-                                Hot Games
-                            </a>
                             <Link href="/" className="px-3 py-2 rounded-sm border border-[var(--color-border-main)]/80 text-[var(--color-text-main)] hover:text-white hover:bg-[var(--color-card)] transition-colors">
+                                Home
+                            </Link>
+                            <Link href="/games/idols-of-ash" className="px-3 py-2 rounded-sm border border-[var(--color-border-main)]/80 text-[var(--color-text-main)] hover:text-white hover:bg-[var(--color-card)] transition-colors">
                                 Idols of Ash
+                            </Link>
+                            <Link href="/games/bullet-train-ii" className="px-3 py-2 rounded-sm border border-[var(--color-border-main)]/80 text-[var(--color-text-main)] hover:text-white hover:bg-[var(--color-card)] transition-colors">
+                                Bullet Train II
                             </Link>
                         </div>
                     </header>

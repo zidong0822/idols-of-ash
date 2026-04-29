@@ -5,6 +5,7 @@ import { GameGridSection } from "@/components/GameGridSection";
 import { GamePlayer } from "@/components/GamePlayer";
 import { StructuredData } from "@/components/StructuredData";
 import { games, getGamesByFlag, idolsOfAshGuideSections, getPlayableGameSrc } from "@/data/games";
+import { indexedGameSlugs } from "@/lib/indexed-pages";
 import { buildItemListSchema, buildWebsiteSchema, toAbsoluteUrl } from "@/lib/schema";
 
 
@@ -12,23 +13,22 @@ import { buildItemListSchema, buildWebsiteSchema, toAbsoluteUrl } from "@/lib/sc
 const idolsOfAsh = games[0];
 
 export default function Home() {
-    const hotGames = getGamesByFlag("isHot");
-    const newGames = getGamesByFlag("isNew");
-    const popularGames = getGamesByFlag("isPopular");
+    const indexedGames = games.filter((game) => indexedGameSlugs.includes(game.slug as (typeof indexedGameSlugs)[number]));
+    const featuredGames = indexedGames.filter((game) => game.slug !== "idols-of-ash");
     const websiteSchema = buildWebsiteSchema();
-    const hotGamesSchema = buildItemListSchema(
-        "Hot Games",
-        hotGames.map((game) => ({
+    const featuredGamesSchema = buildItemListSchema(
+        "Featured Games",
+        featuredGames.map((game) => ({
             name: game.title,
             url: toAbsoluteUrl(`/games/${game.slug}`),
             image: toAbsoluteUrl(game.img),
         })),
-        "/hot-games"
+        "/"
     );
 
     return (
         <div className="w-full space-y-8">
-            <StructuredData data={[websiteSchema, hotGamesSchema]} />
+            <StructuredData data={[websiteSchema, featuredGamesSchema]} />
             <section className="w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-[0_0_30px_rgba(111,19,15,0.22)] bg-[#050404]">
                 <GamePlayer
                     iframeSrc={getPlayableGameSrc(idolsOfAsh)!}
@@ -187,27 +187,9 @@ export default function Home() {
             </section>
 
             <GameGridSection
-                title="Related Games"
-                games={games}
-                subtitle="Start with Idols of Ash, then branch into similar quick-start browser games."
-            />
-
-            <GameGridSection
-                title="Hot Games"
-                games={hotGames}
-                subtitle="Currently trending picks from the site."
-            />
-
-            <GameGridSection
-                title="New Games"
-                games={newGames}
-                subtitle="Fresh additions for players browsing beyond the current breakout title."
-            />
-
-            <GameGridSection
-                title="Popular Games"
-                games={popularGames}
-                subtitle="High-interest games that can keep the session going after Idols of Ash."
+                title="Indexed Game Pages"
+                games={featuredGames}
+                subtitle="Only the currently indexed companion game pages remain linked from the homepage."
             />
         </div>
     );

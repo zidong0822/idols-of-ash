@@ -30,7 +30,6 @@ export default function IdolsOfAshWikiPage() {
     const game = getGameBySlug("idols-of-ash");
     const breadcrumbItems = [
         { label: "Home", href: "/" },
-        { label: "Games", href: "/popular-games" },
         { label: "Idols of Ash", href: "/games/idols-of-ash" },
         { label: "Wiki" },
     ];

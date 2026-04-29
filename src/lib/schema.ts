@@ -54,10 +54,5 @@ export function buildWebsiteSchema() {
         "@type": "WebSite",
         name: "Idols of Ash",
         url: siteUrl,
-        potentialAction: {
-            "@type": "SearchAction",
-            target: `${siteUrl}/popular-games`,
-            "query-input": "required name=search_term_string",
-        },
     };
 }

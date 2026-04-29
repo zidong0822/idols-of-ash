@@ -31,7 +31,6 @@ export default function IdolsOfAshGuidePage() {
                 <Breadcrumbs
                     items={[
                         { label: "Home", href: "/" },
-                        { label: "Games", href: "/popular-games" },
                         { label: "Idols of Ash", href: "/games/idols-of-ash" },
                         { label: "Guide" },
                     ]}

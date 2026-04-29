@@ -7,6 +7,7 @@ import { GameGridSection } from "@/components/GameGridSection";
 import { GamePlayer } from "@/components/GamePlayer";
 import { StructuredData } from "@/components/StructuredData";
 import { games, getGameBySlug, idolsOfAshFaqs, getPlayableGameSrc } from "@/data/games";
+import { indexedGameSlugs, isIndexedGameSlug } from "@/lib/indexed-pages";
 import { buildBreadcrumbSchema, buildItemListSchema, toAbsoluteUrl } from "@/lib/schema";
 
 interface GamePageProps {
@@ -16,11 +17,16 @@ interface GamePageProps {
 }
 
 export async function generateStaticParams() {
-    return games.map((game) => ({ slug: game.slug }));
+    return indexedGameSlugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: GamePageProps): Promise<Metadata> {
     const { slug } = await params;
+
+    if (!isIndexedGameSlug(slug)) {
+        return {};
+    }
+
     const game = getGameBySlug(slug);
 
     if (!game) {
@@ -50,6 +56,11 @@ export async function generateMetadata({ params }: GamePageProps): Promise<Metad
 
 export default async function GamePage({ params }: GamePageProps) {
     const { slug } = await params;
+
+    if (!isIndexedGameSlug(slug)) {
+        notFound();
+    }
+
     const game = getGameBySlug(slug);
 
     if (!game) {
@@ -57,12 +68,11 @@ export default async function GamePage({ params }: GamePageProps) {
     }
 
     const playableSrc = getPlayableGameSrc(game);
-    const embedUrl = game.iframeSrc ? toAbsoluteUrl(`/embed/${game.slug}`) : null;
-
-    const relatedGames = games.filter((candidate) => candidate.slug !== game.slug).slice(0, 5);
+    const relatedGames = games
+        .filter((candidate) => isIndexedGameSlug(candidate.slug) && candidate.slug !== game.slug)
+        .slice(0, 5);
     const breadcrumbItems = [
         { label: "Home", href: "/" },
-        { label: "Games", href: "/popular-games" },
         { label: game.title },
     ];
     const jsonLd = {
@@ -195,14 +205,6 @@ export default async function GamePage({ params }: GamePageProps) {
                         </div>
                     ) : null}
 
-                    {embedUrl && game.embedEnabled !== false ? (
-                        <div className="mt-6">
-                            <h2 className="text-lg font-bold text-white mb-3">Embed This Game</h2>
-                            <div className="relative rounded-xl border border-[var(--color-border-main)]/40 bg-black/15 p-4 font-mono text-xs text-[var(--color-text-muted)] overflow-x-auto whitespace-pre">
-                                {`<iframe src="${embedUrl}" width="960" height="540" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`}
-                            </div>
-                        </div>
-                    ) : null}
                 </div>
             </section>
 
@@ -215,9 +217,6 @@ export default async function GamePage({ params }: GamePageProps) {
                                 A compact set of questions for players arriving from search.
                             </p>
                         </div>
-                        <Link href="/games/idols-of-ash/faq" className="text-sm text-[var(--color-cta)] hover:text-white transition-colors">
-                            FAQ Page →
-                        </Link>
                     </div>
                     <div className="grid md:grid-cols-2 gap-4">
                         {idolsOfAshFaqs.map((faq) => (
@@ -236,9 +235,6 @@ export default async function GamePage({ params }: GamePageProps) {
                         </Link>
                         <Link href="/games/idols-of-ash/wiki" className="text-sm text-[var(--color-cta)] hover:text-white transition-colors">
                             Wiki
-                        </Link>
-                        <Link href="/games/idols-of-ash/faq" className="text-sm text-[var(--color-cta)] hover:text-white transition-colors">
-                            FAQ
                         </Link>
                     </div>
                 </section>

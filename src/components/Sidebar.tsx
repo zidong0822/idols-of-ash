@@ -1,33 +1,18 @@
 import React from 'react';
 import {
-    Flame,
-    Sparkles,
-    Crown,
     Heart,
-    Music,
-    Layers,
-    Swords,
-    Car,
-    Gamepad2,
-    Target
+    TrainFront,
+    Crosshair
 } from 'lucide-react';
 import Link from 'next/link';
 
 export function Sidebar() {
     const menuItems = [
-        { icon: <Flame className="w-5 h-5" />, label: "Hot Games", href: "/hot-games", ext: "text-[var(--color-cta)]" },
-        { icon: <Sparkles className="w-5 h-5" />, label: "New Games", href: "/new-games", ext: "text-[var(--color-secondary)]" },
-        { icon: <Crown className="w-5 h-5" />, label: "Popular Games", href: "/popular-games", ext: "text-[#c2a37a]" },
-        { icon: <Heart className="w-5 h-5" />, label: "Idols of Ash", href: "/", ext: "text-[#c8705f]" },
-    ];
-
-    const categories = [
-        { icon: <Music className="w-5 h-5 text-[#8e6e4a]" />, label: "Rhythm", href: "/tag/rhythm" },
-        { icon: <Layers className="w-5 h-5 text-[#7a5945]" />, label: "Platform", href: "/tag/platform" },
-        { icon: <Swords className="w-5 h-5 text-[#9e4134]" />, label: "Action", href: "/tag/action" },
-        { icon: <Car className="w-5 h-5 text-[#6e5e43]" />, label: "Racing & Driving", href: "/tag/racing-driving" },
-        { icon: <Gamepad2 className="w-5 h-5 text-[#8c7b66]" />, label: "Arcade", href: "/tag/arcade" },
-        { icon: <Target className="w-5 h-5 text-[#b17d47]" />, label: "Shooter", href: "/tag/shooter" },
+        { icon: <Heart className="w-5 h-5" />, label: "Home", href: "/", ext: "text-[#c8705f]" },
+        { icon: <Heart className="w-5 h-5" />, label: "Idols of Ash", href: "/games/idols-of-ash", ext: "text-[var(--color-cta)]" },
+        { icon: <TrainFront className="w-5 h-5" />, label: "Bullet Train II", href: "/games/bullet-train-ii", ext: "text-[var(--color-secondary)]" },
+        { icon: <Crosshair className="w-5 h-5" />, label: "Zone Survival", href: "/games/zone-survival-artifact-hunt", ext: "text-[#c2a37a]" },
+        { icon: <Heart className="w-5 h-5" />, label: "About Us", href: "/about-us", ext: "text-[#8c7b66]" },
     ];
 
     return (
@@ -55,21 +40,6 @@ export function Sidebar() {
                                     {item.icon}
                                 </div>
                                 <span className="ml-3 text-[14px] font-semibold text-[var(--color-text-main)] group-hover/item:text-white transition-colors opacity-0 group-hover:opacity-100 whitespace-nowrap">
-                                    {item.label}
-                                </span>
-                            </Link>
-                        ))}
-                    </nav>
-
-                    <div className="h-px bg-[var(--color-border-main)]/30 mx-4 w-[188px] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-
-                    <nav className="flex flex-col space-y-1 w-[220px] px-2">
-                        {categories.map((item, idx) => (
-                            <Link href={item.href} key={idx} className="flex items-center px-[12px] h-10 rounded-lg hover:bg-[var(--color-card)] transition-colors group/item relative">
-                                <div className="shrink-0 flex items-center justify-center w-[24px]">
-                                    {item.icon}
-                                </div>
-                                <span className="ml-3 text-[14px] font-semibold text-[var(--color-text-muted)] group-hover/item:text-white transition-colors opacity-0 group-hover:opacity-100 whitespace-nowrap pt-0.5">
                                     {item.label}
                                 </span>
                             </Link>

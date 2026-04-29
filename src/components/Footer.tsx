@@ -26,24 +26,22 @@ export function Footer() {
                 {/* Links Area */}
                 <div className="grid grid-cols-2 gap-8 sm:gap-16">
                     <div>
-                        <h4 className="text-white font-bold mb-6 tracking-wider">PLATFORM</h4>
+                        <h4 className="text-white font-bold mb-6 tracking-wider">PAGES</h4>
                         <ul className="space-y-3 text-sm">
                             <li><Link href="/" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Home Page</Link></li>
                             <li><Link href="/games/idols-of-ash" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Idols of Ash</Link></li>
-                            <li><Link href="/about-us" className="text-[var(--color-text-muted)] hover:text-white transition-colors">About Us</Link></li>
-                            <li><Link href="/contact-us" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Contact Us</Link></li>
+                            <li><Link href="/games/bullet-train-ii" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Bullet Train II</Link></li>
+                            <li><Link href="/games/zone-survival-artifact-hunt" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Zone Survival Artifact Hunt</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="text-white font-bold mb-6 tracking-wider">LEGAL</h4>
+                        <h4 className="text-white font-bold mb-6 tracking-wider">SUPPORT</h4>
                         <ul className="space-y-3 text-sm">
-                            <li><Link href="/hot-games" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Hot Games</Link></li>
-                            <li><Link href="/new-games" className="text-[var(--color-text-muted)] hover:text-white transition-colors">New Games</Link></li>
-                            <li><Link href="/popular-games" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Popular Games</Link></li>
-                            <li><Link href="/privacy-policy" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="/terms-of-service" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Terms of Service</Link></li>
-                            <li><Link href="/dmca" className="text-[var(--color-text-muted)] hover:text-white transition-colors">DMCA</Link></li>
+                            <li><Link href="/about-us" className="text-[var(--color-text-muted)] hover:text-white transition-colors">About Us</Link></li>
+                            <li><Link href="/games/idols-of-ash/guide" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Guide</Link></li>
+                            <li><Link href="/games/idols-of-ash/achievements" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Achievements</Link></li>
+                            <li><Link href="/games/idols-of-ash/wiki" className="text-[var(--color-text-muted)] hover:text-white transition-colors">Wiki</Link></li>
                         </ul>
                     </div>
                 </div>

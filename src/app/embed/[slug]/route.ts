@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getGameBySlug } from "@/data/games";
+import { isIndexedGameSlug } from "@/lib/indexed-pages";
 
 interface EmbedRouteProps {
     params: Promise<{
@@ -17,6 +18,11 @@ function escapeHtml(value: string) {
 
 export async function GET(_request: Request, { params }: EmbedRouteProps) {
     const { slug } = await params;
+
+    if (!isIndexedGameSlug(slug)) {
+        return new NextResponse("Not found", { status: 404 });
+    }
+
     const game = getGameBySlug(slug);
 
     if (!game || !game.iframeSrc || game.embedEnabled === false) {

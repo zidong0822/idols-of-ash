@@ -1178,10 +1178,6 @@ export function getGamesByCategory(category: string): Game[] {
     return games.filter((game) => game.categories.includes(category));
 }
 
-export function getGameEmbedUrl(game: Game) {
-    return toAbsoluteUrl(`/embed/${game.slug}`);
-}
-
 export function getPlayableGameSrc(game: Game) {
     if (!game.iframeSrc || game.embedEnabled === false) {
         return null;
