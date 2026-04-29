@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
 import Link from "next/link";
 import Script from "next/script";
 import "./globals.css";
@@ -7,19 +6,6 @@ import React from "react";
 import { Sidebar } from "@/components/Sidebar";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
-
-const displayFont = Cormorant_Garamond({
-    subsets: ["latin"],
-    weight: ["500", "600", "700"],
-    variable: "--font-display",
-    display: "swap",
-});
-
-const bodyFont = Inter({
-    subsets: ["latin"],
-    variable: "--font-body",
-    display: "swap",
-});
 
 export const metadata: Metadata = {
     title: "Idols of Ash - Browser Game Guides, Play Pages, and Support Content",
@@ -65,7 +51,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
+        <html lang="en">
             <head>
                 <meta name="google-adsense-account" content="ca-pub-2692320437029895" />
             </head>

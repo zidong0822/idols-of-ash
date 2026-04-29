@@ -11,8 +11,8 @@
     --color-text-muted: #9f9385;
     --color-border-main: #5f4731;
 
-    --font-family-display: var(--font-display), serif;
-    --font-family-body: var(--font-body), sans-serif;
+    --font-family-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    --font-family-body: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 @layer base {
